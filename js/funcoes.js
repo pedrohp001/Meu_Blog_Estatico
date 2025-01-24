@@ -1,9 +1,9 @@
 /***********************************************
  * Nome do Arquivo: funcoes.js
  * Descrição: Biblioteca de funções JavaScript de uso geral.
- * Autor: André Luferat
+ * Autor: Pedro Henrique
  * Data de Criação: 13/01/2025
- * Última Modificação: 13/01/2025
+ * Última Modificação: 24/01/2025
  * Versão: 1.0
  ***********************************************/
 
