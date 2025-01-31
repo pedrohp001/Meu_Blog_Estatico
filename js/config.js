@@ -1,24 +1,16 @@
 /**
- * Chaves de conexão ccom o Firebase.
- * ATENÇÃO! Sempre troque essas chaves pelas chaves do seu projeto.
- **/
-const firebaseConfig = {
-  apiKey: "AIzaSyBladGOpyg3xoPPYOp6a9vnJSpzLtahInY",
-  authDomain: "meu-blog-estatico-e48c3.firebaseapp.com",
-  projectId: "meu-blog-estatico-e48c3",
-  storageBucket: "meu-blog-estatico-e48c3.firebasestorage.app",
-  messagingSenderId: "936649434929",
-  appId: "1:936649434929:web:16523d408bca26ec0c7210"
-};
-
-/**
- * Configuração do site;
+ * Configuração do site.
+ * 
+ * Essas são chaves de configuração global do site que permitem o 
+ * reaproveitamento rápido do código.
+ * 
+ * Você pode adicionar novas chaves aqui conforme sua necessidade.
  **/
 const site = {
 
   /**
-  * Nome do site usado na tag <title>...</title> e nas interações dinâmicas
-  **/
+   * Nome do site usado na tag <title>...</title> e nas interações dinâmicas
+   **/
   nome: "Meu Blog Estático",
 
   /**
@@ -29,22 +21,29 @@ const site = {
   /**
    * Controla a ação ao clicar no link do usuário logado no menu principal
    * Se `true`, exibe o perfil do usuário → perfil.html
-   * Se `false`, faz logout direto
+   * Se `false`, faz logout direto ← Útil durante o desenvolvimento
    **/
   verPerfil: true,
 
   /**
-   * Ano de lançamento do site
+   * Ano de lançamento do site.
+   * Usado na licensa do site no rodapé.
    **/
   ano: 2025,
 
   /**
-   * Licensa do site usada no rodapé
+   * Licensa do site usada no rodapé.
+   * `span#footerAno` receberá o ano conforme `site.ano` acima.
    **/
   licensa: `
     <i class="fa-regular fa-copyright fa-rotate-180 fa-fw"></i>
     <span>Copyleft <span id="footerAno"></span> Joca da Silva</span>
     `,
 
+  /**
+  * Lista de tags HTML permitidas nos comentários.
+  * Todas as outras tags html serão removidas.
+  **/
+  tagsPermitidasComentario: ['em', 'strong', 'i', 'b', 'sup', 'sub', 'code']
 }
 

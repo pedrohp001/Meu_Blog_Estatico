@@ -11,19 +11,24 @@
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 const auth = firebaseApp.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
 
 /**
  * Quando o documento está pronto, roda o JavaScript
  **/
 window.onload = () => { // Isso é uma "arrow function"
 
-    /**
-     * Altera o <title> padrão da página atual.
-     **/
-    document.title = site.nome;
-
     // Carrega o template HTML em div#wrap
     _('#wrap').innerHTML = template();
+
+    // Observa as mudanças de status do usuário
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            console.log(user)
+        } else {
+            console.log('não logado')
+        }
+    });
 
     /**
      * Obtém o ano da data atual e atualiza a licensa do site.
@@ -43,5 +48,25 @@ window.onload = () => { // Isso é uma "arrow function"
          * mostra o ano de fundação.
          **/
         _('#footerAno').innerHTML = site.ano;
+
+    _('#usuarioAcao').addEventListener('click', (evento) => {
+        // Bloqueia a execução normal do evento
+        evento.preventDefault();
+
+        let acao = _('#usuarioAcao').getAttribute('data-acao');
+        console.log(acao);
+        switch (acao) {
+            case 'login':
+                fbSigIn();
+                break;
+            case 'logout':
+                fbSignOut();
+                break;
+            case 'perfil':
+                location.href = 'perfil.html';
+        }
+        
+    });
+
 
 }
