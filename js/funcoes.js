@@ -1,9 +1,9 @@
 /***********************************************
  * Nome do Arquivo: funcoes.js
  * Descrição: Biblioteca de funções JavaScript de uso geral.
- * Autor: Pedro.H
+ * Autor: André Luferat
  * Data de Criação: 13/01/2025
- * Última Modificação: 24/01/2025
+ * Última Modificação: 13/01/2025
  * Versão: 1.0
  ***********************************************/
 
@@ -20,7 +20,6 @@ function formatarData(data, formato) {
     const horas = String(data.getHours()).padStart(2, '0');
     const minutos = String(data.getMinutes()).padStart(2, '0');
     const segundos = String(data.getSeconds()).padStart(2, '0');
-
     if (formato === 'ISO') {
         return `${ano}-${mes}-${dia} ${horas}:${minutos}:${segundos}`;
     } else if (formato === 'BR') {
@@ -50,7 +49,7 @@ function dataISOparaBR(dataISO) {
 }
 
 /**
- * Converte uma data do formato JavaScript para o formato ISO.
+ * Converte uma data do formato JavaScript (GMT) para o formato ISO.
  * @param {Date} dataJS - A data no formato JavaScript.
  * @returns {string} A data no formato ISO (YYYY-MM-DD HH:MM:SS).
  **/
@@ -80,6 +79,42 @@ function _(seletor) {
 }
 
 /**
+ * Login no Firebase Authentication
+ */
+function fbSigIn() {
+    firebase.auth().signInWithPopup(provider);
+}
+
+/**
+ * Função para realizar o logout do Firebase e redirecionar o usuário, se necessário.
+ * 
+ * Esta função efetua o logout do Firebase, usando o método `signOut` da autenticação do Firebase.
+ * Se o parâmetro `abrePagina` for fornecido e não estiver vazio, o navegador será redirecionado para a URL especificada.
+ *
+ * @param {string} [abrePagina=''] - URL para a qual o usuário será redirecionado após o logout. 
+ *                                   Se não for fornecido ou for uma string vazia, o redirecionamento não ocorre.
+ * 
+ * @returns {void} - A função não retorna nenhum valor.
+ * 
+ * @example
+ * // Realiza o logout e redireciona o usuário para a página inicial.
+ * fbSignOut('index.html');
+ * 
+ * @example
+ * // Realiza o logout sem redirecionar.
+ * fbSignOut();
+ */
+function fbSignOut(abrePagina = '') {
+    // Realiza o logout do Firebase
+    firebase.auth().signOut();
+
+    // Se o parâmetro abrePagina não for vazio, redireciona para a URL fornecida
+    if (abrePagina != '') {
+        location.href = abrePagina;
+    }
+}
+
+/**
  * Retorna o template HTML padrão do site
  **/
 function template() {
@@ -101,7 +136,7 @@ function template() {
             <a href="/" title="Página incial"><i class="fa-solid fa-house fa-fw"></i><span>Início</span></a>
             <a href="contatos.html" title="Faça contato conosto"><i class="fa-solid fa-comments fa-fw"></i><span>Contatos</span></a>
             <a href="sobre.html" title="Sobre o site e o autor"><i class="fa-solid fa-circle-info fa-fw"></i><span>Sobre</span></a>
-            <a href="login.html" id="usuarioAcao" title="Logue-se no site"><img src="img/anonimous.png" alt="Faça login"><span>Login</span></a>
+            <a href="login.html" id="usuarioAcao" title="Logue-se no site" data-acao="login"><img src="img/anonimous.png" alt="Faça login" referrerpolicy="no-referrer"><span>Login</span></a>
         </nav>
         <main id="conteudo"></main>
         <footer>

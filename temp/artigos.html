@@ -4,22 +4,23 @@
         <em>CUIDADO! Esta ação apaga todos os "artigos" preexistentes!</em>
     
     <button id="iniciar">Apagar artigos atuais e salvar os novos</button> ← Clique somente uma vez!!!
-    </pre>
+</pre>
 
-<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore-compat.js"></script>
+
 <script>
     /**
      * Configuração do Firebase
+     * ATENÇÃO! Altere para as chaves do seu projeto
      **/
      const firebaseConfig = {
-         apiKey: "AIzaSyBladGOpyg3xoPPYOp6a9vnJSpzLtahInY",
-         authDomain: "meu-blog-estatico-e48c3.firebaseapp.com",
-         projectId: "meu-blog-estatico-e48c3",
-         storageBucket: "meu-blog-estatico-e48c3.firebasestorage.app",
-         messagingSenderId: "936649434929",
-         appId: "1:936649434929:web:16523d408bca26ec0c7210"
+  apiKey: "AIzaSyBladGOpyg3xoPPYOp6a9vnJSpzLtahInY",
+  authDomain: "meu-blog-estatico-e48c3.firebaseapp.com",
+  projectId: "meu-blog-estatico-e48c3",
+  storageBucket: "meu-blog-estatico-e48c3.firebasestorage.app",
+  messagingSenderId: "936649434929",
+  appId: "1:936649434929:web:16523d408bca26ec0c7210"
 };
 
     /**
@@ -29,10 +30,9 @@
     const firebaseApp = firebase.initializeApp(firebaseConfig);
     const db = firebaseApp.firestore();
 
-    
     let artigos = [];
-    
-     // Promise * promessa
+
+    // Promise → Promessa
     async function carregarArtigos(arquivoJSON) {
         try {
             const resposta = await fetch(arquivoJSON);
