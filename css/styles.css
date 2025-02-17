@@ -1,0 +1,142 @@
+/* Reset do CSS */
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html,
+body,
+#wrap {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* Resposividade: cria a unidade responsiva `rem` → 1rem = 16px*/
+    font-size: 16px;
+}
+
+/* Definição do fundo da página */
+body {
+    background-attachment: fixed;
+    background-color: white;
+    background-image: url('../img/bg04.png');
+    background-position: center;
+    background-repeat: repeat;
+}
+
+#wrap {
+    margin: auto;
+}
+
+header {
+    background-color: cornflowerblue;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header img {
+    display: block;
+    width: 4rem;
+    height: auto;
+}
+
+header h1 {
+    flex-grow: 1;
+    margin: 0;
+    margin-left: 1rem;
+    -webkit-text-stroke: .5px white;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-andar-1 i {
+    color: orange;
+}
+
+.footer-andar-1 i:hover {
+    color: orangered;
+}
+
+.footer-andar-2 ul a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-andar-2 ul a:hover {
+    color: orange;
+}
+
+.footer-andar-2 ul {
+    line-height: 2;
+}
+
+main article {
+    background-color: #fff;
+}
+
+main aside {
+    background-color: #eee;
+}
+
+/*
+ * Estilização do formulário de contato.
+ */
+
+#formContato {
+    display: table;
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+}
+
+#formContato label {
+    display: block;
+    padding: .25rem .5rem;
+}
+
+#formContato input,
+#formContato textarea {
+    width: 100%;
+    background-color: rgb(255, 235, 235);
+    border: 1px solid red;
+    border-radius: .3rem;
+    border-bottom: 3px solid red;
+    padding: .5rem 1rem;
+}
+
+#formContato textarea {
+    height: 6rem;
+    resize: vertical;
+}
+
+#formContato button {
+    background-color: rgb(147, 147, 147);
+    color: #fff;
+    border: none;
+    border-radius: .3rem;
+    padding: .5rem 1rem;
+    pointer-events: none; /* Desabilita o clique no botão */
+}
+
+/* Quando o campo está válido */
+#formContato input:valid,
+#formContato textarea:valid {
+    background-color: rgb(233, 240, 254);
+    border: 1px solid blue;
+    border-bottom: 3px solid blue;
+}
+
+/* Botão para o formulário válído */
+#formContato:valid button {
+    pointer-events: all; /* Habilita o clique no botão */
+    background-color: steelblue;
+    cursor: pointer;
+}

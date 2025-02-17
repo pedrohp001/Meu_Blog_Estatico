@@ -15,7 +15,7 @@
     <!-- Componentes do Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-    <title>Petite Guarda</title>
+    <title>Petite Guarda - Faça contato</title>
 </head>
 
 <body>
@@ -73,15 +73,64 @@
         <main class="container flex-grow-1 d-flex">
             <div class="row d-flex flex-grow-1">
                 <article class="col-12 col-md-9 flex-grow-1 p-3">
-                    <h2>Article</h2>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis temporibus odit in obcaecati
-                    eveniet minima sint reiciendis! Maxime, iure sequi eum quasi nobis, facere doloribus deserunt
-                    mollitia
-                    asperiores corporis qui?
+
+                    <h2>Faça contato</h2>
+
+                    <p>Preencha todos os campos para entrar em contato com e equipe "Petite Guarda".</p>
+
+                    <form action="processa.html" method="get" id="formContato">
+
+                        <p>
+                            <label for="campoNome">Nome:</label>
+                            <input type="text" name="nome" id="campoNome" placeholder="Seu nome completo" minlength="3" required>
+                        </p>
+
+                        <p>
+                            <label for="campoEmail">E-mail:</label>
+                            <input type="email" name="email" id="campoEmail" placeholder="Um e-mail válido" required>
+                        </p>
+
+                        <p>
+                            <label for="campoAssunto">Assunto:</label>
+                            <input type="text" name="assunto" id="campoAssunto" placeholder="Assunto do contato" minlength="5" required>
+                        </p>
+
+                        <p>
+                            <label for="campoMensagem">Mensagem:</label>
+                            <textarea name="mensagem" id="campoMensagem" placeholder="Mensagem do contato" minlength="5" required></textarea>
+                        </p>
+
+                        <p>
+                            <button type="submit">Enviar</button>
+                            <!-- small>&larr; Clique somente uma vez.</small -->
+                        </p>
+
+                    </form>
+
                 </article>
                 <aside class="col-12 col-md-3 p-3">
-                    <h2>Aside</h2>
+                    <h2>+contatos</h2>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero iure nostrum.
+
+                    <nav>
+                        <ul class="list-unstyled">
+                            <li><a href="https://facebook.com/petiteguarda" target="_blank">
+                                <i class="fa-brands fa-square-facebook" style="color: #005eff;"></i> Facebook
+                                </a></li>
+                            <li><a href="https://instagram.com/petiteguarda" target="_blank">
+                                    <i class="fa-brands fa-square-instagram"></i> Instagram
+                                </a></li>
+                            <li><a href="https://youtube.com/petiteguarda" target="_blank">
+                                    <i class="fa-brands fa-square-youtube"></i> Youtube
+                                </a></li>
+                            <li><a href="https://ws.com/petiteguarda" target="_blank">
+                                    <i class="fa-brands fa-square-whatsapp"></i> Whatsapp
+                                </a></li>
+                        </ul>
+                    </nav>
+
+
+
                 </aside>
             </div>
         </main>
@@ -107,7 +156,7 @@
                 <nav>
                     <ul class="list-unstyled">
                         <li><a href="https://facebook.com/petiteguarda" target="_blank">
-                                <i class="fa-brands fa-square-facebook"></i> Facebook
+                            <i class="fa-brands fa-square-facebook"></i> Facebook
                             </a></li>
                         <li><a href="https://instagram.com/petiteguarda" target="_blank">
                                 <i class="fa-brands fa-square-instagram"></i> Instagram
