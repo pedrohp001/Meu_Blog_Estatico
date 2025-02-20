@@ -1,0 +1,213 @@
+/* Reset do CSS */
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html,
+body,
+#wrap {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* Resposividade: cria a unidade responsiva `rem` → 1rem = 16px*/
+    font-size: 16px;
+}
+
+/* Definição do fundo da página */
+body {
+    background-attachment: fixed;
+    background-color: white;
+    background-image: url('../img/fundo.avif');
+    background-position: center;
+    background-repeat: repeat;
+}
+
+#wrap {
+    margin: auto;
+}
+
+header {
+    background-color: rgb(9, 223, 223);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header img {
+    display: block;
+    width: 4rem;
+    height: auto;
+}
+
+header h1 {
+    flex-grow: 1;
+    margin: 0;
+    margin-left: 1rem;
+    -webkit-text-stroke: .5px white;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-andar-1 i {
+    color: rgb(6, 243, 192);
+}
+
+.footer-andar-1 i:hover {
+    color: orangered;
+}
+
+.footer-andar-2 ul a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-andar-2 ul a:hover {
+    color: orange;
+}
+
+.footer-andar-2 ul {
+    line-height: 2;
+}
+
+.footer-andar-1 i,
+.footer-andar-2 i {
+    list-style: none;
+}
+
+main article {
+    background-color: #fff;
+}
+
+main aside {
+    background-color: #eee;
+}
+
+/*
+ * Estilização do formulário de contato.
+ */
+
+#formContato {
+    display: table;
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+}
+
+#formContato label {
+    display: block;
+    padding: .25rem .5rem;
+}
+
+#formContato input,
+#formContato textarea {
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    border: 1px solid rgb(248, 248, 248);
+    border-radius: .3rem;
+    border-bottom: 3px solid rgb(4, 213, 228);
+    padding: .5rem 1rem;
+}
+
+#formContato textarea {
+    height: 6rem;
+    resize: vertical;
+}
+
+#formContato button {
+    background-color: rgb(0, 224, 205);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: .3rem;
+    padding: .25rem .5rem;
+    pointer-events: none; /* Desabilita o botão */
+}
+
+#formContato input:valid,
+#formContato textarea:valid {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 255, 42);
+    border-radius: .3rem;
+    border-bottom: 3px solid rgb(0, 255, 13);
+    padding: .5rem 1rem;
+}
+
+#formContato:valid button {
+    pointer-events: all;
+    background-color: rgb(108, 170, 113);
+    cursor: pointer;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+/*
+ * Estilização do formulário de cadastro.
+ */
+
+
+ #formCadastro {
+    display: table;
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+}
+
+#formCadastro label {
+    display: block;
+    padding: .25rem .5rem;
+}
+
+#formCadastro input,
+#formCadastro textarea {
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    border: 1px solid rgb(248, 248, 248);
+    border-radius: .3rem;
+    border-bottom: 3px solid rgb(4, 213, 228);
+    padding: .5rem 1rem;
+}
+
+#formCadastro textarea {
+    height: 6rem;
+    resize: vertical;
+}
+
+#formCadastro button {
+    background-color: aqua;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: .3rem;
+    padding: .25rem .5rem;
+    pointer-events: none; /* Desabilita o botão */
+}
+
+#formCadastro input:valid,
+#formCadastro textarea:valid {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 255, 42);
+    border-radius: .3rem;
+    border-bottom: 3px solid rgb(0, 255, 13);
+    padding: .5rem 1rem;
+}
+
+#formCadastro:valid button {
+    pointer-events: all;
+    background-color: rgb(0, 238, 255);
+    cursor: pointer;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}

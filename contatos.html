@@ -15,7 +15,7 @@
     <!-- Componentes do Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-    <title>Petite Guarda</title>
+    <title>Petite Guarda - Faça contato</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
             <a href="index.html">
                 <img src="img/logo.png" alt="Logotipo de Petite Guarda">
             </a>
-            <h1>Petite Guarda</h1>
+            <h1>Petiti Guarda</h1>
         </header>
 
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -44,9 +44,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="download.html">DOWNLOAD</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Cachorro</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -76,63 +73,63 @@
         <main class="container flex-grow-1 d-flex">
             <div class="row d-flex flex-grow-1">
                 <article class="col-12 col-md-9 flex-grow-1 p-3">
-                    <h2>Bem-vindo à Petite Guarda</h2>
-                    <p>Na Petite Guarda, somos apaixonados pelo bem-estar dos animais de estimação. Nossa missão é proporcionar qualidade de vida e felicidade para os pets e seus donos, oferecendo produtos e serviços de alta qualidade.</p>
-                    
-                    <h3>Nossos Produtos</h3>
-                    <p>Oferecemos uma ampla gama de produtos para atender todas as necessidades dos seus pets, incluindo:</p>
-                    <ul>
-                        <li>Rações premium</li>
-                        <img src="logo.png" alt="">
-                        <li>Brinquedos</li>
-                        <li>Acessórios</li>
-                        <li>Produtos de higiene</li>
-                    </ul>
-                    
-                    <h3>Nossos Serviços</h3>
-                    <p>Além dos produtos, também oferecemos serviços especializados para garantir o bem-estar dos seus animais de estimação:</p>
-                    <ul>
-                        <li>Banho e tosa</li>
-                        <li>Consultas veterinárias</li>
-                        <li>Adestramento</li>
-                        <li>Hospedagem para pets</li>
-                    </ul>
-                    
-                    <h3>Por que Escolher a Petite Guarda?</h3>
-                    <p>Na Petite Guarda, nos dedicamos a oferecer o melhor para os seus pets. Nossos valores incluem:</p>
-                    <ul>
-                        <li><strong>Paixão:</strong> Somos apaixonados pelo mundo pet e dedicados ao bem-estar dos animais.</li>
-                        <li><strong>Qualidade:</strong> Oferecemos produtos e serviços de alta qualidade para garantir a satisfação dos nossos clientes.</li>
-                        <li><strong>Inovação:</strong> Buscamos constantemente novas soluções para atender às necessidades dos pets e seus tutores.</li>
-                        <li><strong>Responsabilidade:</strong> Atuamos de forma ética e responsável, respeitando os animais, os clientes e o meio ambiente.</li>
-                    </ul>
-                    
-                    <h3>Entre em Contato</h3>
-                    <p>Se você tiver alguma dúvida ou precisar de mais informações, não hesite em entrar em contato conosco. Estamos aqui para ajudar!</p>
+                    <h2>Faça contato</h2>
+
+                    <p>Preencha todos os campos para entrar em contato com a equipe "petiteguarda"</p>
+
+                    <form action="processa.html" method="get" id="formContato">
+
+                        <p>
+                            <label for="campoNome">Nome:</label>
+                            <input type="text" name="nome" id="campoNome" placeholder="Seu nome completo" minlength="3" required>
+                        </p>
+
+                        <p>
+                            <label for="campoEmail">E-mail:</label>
+                            <input type="email" name="email" id="campoEmail" placeholder="Um e-mail válido" required>
+                        </p>
+
+                        <p>
+                            <label for="campoAssunto">Assunto:</label>
+                            <input type="text" name="assunto" id="campoAssunto" placeholder="Assunto do contato" minlength="5" required>
+                        </p>
+
+                        <p>
+                            <label for="campoMensagem">Mensagem:</label>
+                            <textarea name="mensagem" id="campoMensagem" placeholder="Mensagem do contato" minlength="5" required></textarea>
+                        </p>
+
+                        <p>
+                            <button type="submit">Enviar</button>
+                            <small>&larr; Clique somente uma vez.</small>
+                        </p>
+
+                    </form>
+                   
                 </article>
                 <aside class="col-12 col-md-3 p-3">
                     <h2>+contatos</h2>
-                    Você também pode entrar em contato ou saber mais pelas nossas redes sociais:
+                   Você também pode entrar em contato ou saber mais pelas nossas redes sociais:
+                    
+                <ul class="list-unstyled"></ul>
+                    <li><a href="https://facebook.com/petiteguarda" target="_blank">
+                            <i class="fa-brands fa-square-facebook fa-2x"></i>
+                        </a></li>
+                    <li><a href="https://github.com/petiteguarda" target="_blank">
+                            <i class="fa-brands fa-github fa-2x" style="color: #000000;"></i>
+                        </a></li>
+                    <li><a href="https://youtube.com/petiteguarda" target="_blank">
+                            <i class="fa-brands fa-youtube fa-2x" style="color: #fa0000;"></i>
+                        </a></li>
+                    <li><a href="https://linkedin.com/petiteguarda" target="_blank">
+                            <i class="fa-brands fa-linkedin fa-2x" style="color: #0040ad;"></i>
+                        </a></li>
+                </ul>
+                 
+                <h2>+Sobre</h2>
+                Contamos com uma equipe de profissionais apaixonados pelo mundo pet, que se esforçam para oferecer o melhor atendimento e garantir a saúde e a felicidade dos bichinhos.
 
-                    <ul class="list-unstyled d-flex flex-wrap gap-2"></ul>
-                        <li><a href="https://facebook.com/petiteguarda" target="_blank">
-                                <i class="fa-brands fa-square-facebook fa-2x"></i>
-                            </a></li>
-                        <li><a href="https://github.com/petiteguarda" target="_blank">
-                                <i class="fa-brands fa-github fa-2x" style="color: #000000;"></i>
-                            </a></li>
-                        <li><a href="https://youtube.com/petiteguarda" target="_blank">
-                                <i class="fa-brands fa-youtube fa-2x" style="color: #fa0000;"></i>
-                            </a></li>
-                        <li><a href="https://linkedin.com/petiteguarda" target="_blank">
-                                <i class="fa-brands fa-linkedin fa-2x" style="color: #0040ad;"></i>
-                            </a></li>
-                    </ul>
-
-                    <h2>+Sobre</h2>
-                    Contamos com uma equipe de profissionais apaixonados pelo mundo pet, que se esforçam para oferecer o
-                    melhor atendimento e garantir a saúde e a felicidade dos bichinhos.
-
+                </aside>
             </div>
         </main>
 
